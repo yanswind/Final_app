@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Final App</string>
+    <string name="title_home">首页</string>
+    <string name="title_community">社区</string>
+    <string name="title_info">我的</string>
+    <string name="run2_male">1000米</string>
+    <string name="run2_female">800米</string>
+    <string name="up_male">引体向上</string>
+    <string name="up_female">仰卧起坐</string>
+    <string-array name="spinner_values">
+        <item>大一</item>
+        <item>大二</item>
+        <item>大三</item>
+        <item>大四</item>
+    </string-array>
+</resources>
