@@ -13,4 +13,7 @@
         <item>大三</item>
         <item>大四</item>
     </string-array>
+    <string name="menu_home">首页</string>
+    <string name="menu_community">社区</string>
+    <string name="menu_info">我的</string>
 </resources>

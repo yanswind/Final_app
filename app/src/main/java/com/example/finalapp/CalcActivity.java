@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class score_calc extends AppCompatActivity {
+public class CalcActivity extends AppCompatActivity {
     private Spinner grade;
     private RadioGroup gender;
     private EditText height;
@@ -26,7 +26,7 @@ public class score_calc extends AppCompatActivity {
     private EditText run2;
     private EditText up1;
     private TextView result;
-    String TAG = "calc";
+    String TAG = "Calc";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,33 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-tools:context=".Home">
-
-<TextView
-    android:id="@+id/title"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/title_home"
-    android:textSize="35dp"
-    android:textStyle="bold"
-    android:padding="10dp" />
-
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="5dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="8dp"
-    android:background="#673AB7" />
-
-<ListView
-    android:id="@+id/list1"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"/>
-</LinearLayout>
+    tools:context=".HomeActivity">
 
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/purple">
 
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="体测轻松过"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:padding="10dp"/>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/grey"/>
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/tab_menu_item"
+            android:checked="true"
+            android:drawableTop="@mipmap/ic_home"
+            android:text="@string/menu_home" />
+
+        <RadioButton
+            android:id="@+id/rb_community"
+            style="@style/tab_menu_item"
+            android:drawableTop="@mipmap/ic_community"
+            android:text="@string/menu_community" />
+
+        <RadioButton
+            android:id="@+id/rb_info"
+            style="@style/tab_menu_item"
+            android:drawableTop="@mipmap/ic_info"
+            android:text="@string/menu_info"/>
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/rg_tab_bar"
+        android:background="@color/grey"/>
+
+    <FrameLayout
+        android:id="@+id/ly_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tab_bar"
+        android:layout_below="@id/top_bar">
+
+        <TextView
+            android:id="@+id/nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading"
+            android:layout_gravity="center"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <ListView
+            android:id="@+id/homelist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+        </ListView>
+
+    </FrameLayout>
+
+</RelativeLayout>
