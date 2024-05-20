@@ -140,6 +140,10 @@ public class HomeActivity extends AppCompatActivity implements RadioGroup.OnChec
                 String clickedItem = (String) parent.getItemAtPosition(position);
                 Log.i(TAG,"onCreate:"+clickedItem);
                 // 处理点击事件
+                if(position == 0){
+                    Intent intent = new Intent(HomeActivity.this, StandardActivity.class);
+                    startActivity(intent);
+                }
                 if(position == 2){
                     Intent intent = new Intent(HomeActivity.this, CalcActivity.class);
                     startActivity(intent);
