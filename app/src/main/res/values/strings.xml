@@ -16,4 +16,5 @@
     <string name="menu_home">首页</string>
     <string name="menu_community">社区</string>
     <string name="menu_info">我的</string>
+    <string name="btn">查看详情</string>
 </resources>
