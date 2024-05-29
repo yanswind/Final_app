@@ -143,8 +143,10 @@ public class HomeActivity extends AppCompatActivity implements RadioGroup.OnChec
                 if(position == 0){
                     Intent intent = new Intent(HomeActivity.this, StandardActivity.class);
                     startActivity(intent);
-                }
-                if(position == 2){
+                } else if (position == 1) {
+                    Intent intent = new Intent(HomeActivity.this, ScoreActivity.class);
+                    startActivity(intent);
+                } else {
                     Intent intent = new Intent(HomeActivity.this, CalcActivity.class);
                     startActivity(intent);
                 }

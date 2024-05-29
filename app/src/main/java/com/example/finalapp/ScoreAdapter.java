@@ -23,11 +23,13 @@ public class ScoreAdapter extends ArrayAdapter {
             itemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
         TestItem item = (TestItem) getItem(position);
-        TextView title = (TextView) itemView.findViewById(R.id.itemTitle);
-        TextView detail = (TextView) itemView.findViewById(R.id.itemDetail);
+        TextView name = (TextView) itemView.findViewById(R.id.itemName);
+        TextView record = (TextView) itemView.findViewById(R.id.itemRecord);
+        TextView score = (TextView) itemView.findViewById(R.id.itemScore);
 
-        title.setText(item.getItemName());
-        detail.setText(item.getItemRecord()+"得分："+item.getItemScore());
+        name.setText(item.getItemName());
+        record.setText("成绩："+item.getItemRecord());
+        score.setText("得分："+item.getItemScore());
         return itemView;
     }
 }

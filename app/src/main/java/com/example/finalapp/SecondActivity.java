@@ -6,25 +6,23 @@ import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class FirstActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first);
+        setContentView(R.layout.activity_second);
 
-        TestManager testManager = new TestManager(FirstActivity.this);
-        ListView listView1 = findViewById(R.id.list1);
-        List<TestItem> itemList = testManager.findByGrade(1);
+        TestManager testManager = new TestManager(SecondActivity.this);
+        ListView listView2 = findViewById(R.id.list2);
+        List<TestItem> itemList = testManager.findByGrade(2);
         ScoreAdapter adapter = new ScoreAdapter(this, itemList);
-        listView1.setAdapter(adapter);
+        listView2.setAdapter(adapter);
 
         TextView nodata = findViewById(R.id.nodata);
-        listView1.setEmptyView(nodata);
+        listView2.setEmptyView(nodata);
         nodata.setText("No data");
-
     }
 }
