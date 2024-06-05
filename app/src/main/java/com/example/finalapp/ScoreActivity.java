@@ -59,14 +59,14 @@ public class ScoreActivity extends AppCompatActivity {
         Log.i(TAG,"大二体测数据写入完毕");
 
         // 体测总分数
-        score_first = (float) (score1[0] * 0.15 + score1[1] * 0.15 + score1[2] * 0.1 + score1[3] * 0.1 + score1[4] * 0.2 + score1[5] * 0.2 + score1[6] * 0.1 + score1[7]);
+        score_first = (float) (score1[1] * 0.15 + score1[2] * 0.15 + score1[3] * 0.1 + score1[4] * 0.1 + score1[5] * 0.2 + score1[6] * 0.2 + score1[7] * 0.1 + score1[8]);
         String result1 = String.format("%.2f", score_first);
         TextView scoreView1 = findViewById(R.id.score1);
         scoreView1.setText(result1);
         TextView addition_score1 = findViewById(R.id.addition_score1);
         addition_score1.setText(String.valueOf(score1[8]));
 
-        score_second = (float) (score2[0] * 0.15 + score2[1] * 0.15 + score2[2] * 0.1 + score2[3] * 0.1 + score2[4] * 0.2 + score2[5] * 0.2 + score2[6] * 0.1 + score2[7]);
+        score_second = (float) (score2[1] * 0.15 + score2[2] * 0.15 + score2[3] * 0.1 + score2[4] * 0.1 + score2[5] * 0.2 + score2[6] * 0.2 + score2[7] * 0.1 + score2[8]);
         String result2 = String.format("%.2f", score_second);
         TextView scoreView2 = findViewById(R.id.score2);
         scoreView2.setText(result2);
@@ -77,7 +77,8 @@ public class ScoreActivity extends AppCompatActivity {
         tip.setText("注：假设X1、X2、X3、X4分别代表大一到大四的体测总分，则毕业时成绩=（X1+X2+X3)/3 x 50% + X4 x 50%。（毕业时成绩达不到50分者按结业或肄业处理）");
         //当前总分
         TextView total_score = findViewById(R.id.total_score);
-        total_score.setText(String.valueOf((score_first+score_second+score_third)/3*0.5+score_fourth*0.5));
+
+        total_score.setText(String.format("%.2f", (score_first+score_second+score_third)/3*0.5+score_fourth*0.5));
     }
 
     public void click1(View v) {

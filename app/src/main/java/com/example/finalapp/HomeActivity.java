@@ -211,8 +211,9 @@ public class HomeActivity extends AppCompatActivity implements RadioGroup.OnChec
         FragmentTransaction fTransaction = fManager.beginTransaction();
         if(checkedId == R.id.rb_home){
             //当前页面
-        }else if(checkedId == R.id.rb_community){
-
+        }else if(checkedId == R.id.rb_exercise){
+            Intent intent = new Intent(HomeActivity.this, RunActivity.class);
+            startActivity(intent);
         }else if(checkedId == R.id.rb_info){
             Intent intent = new Intent(HomeActivity.this, InfoActivity.class);
             startActivity(intent);

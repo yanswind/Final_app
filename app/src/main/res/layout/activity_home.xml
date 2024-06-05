@@ -43,10 +43,10 @@
             android:text="@string/menu_home" />
 
         <RadioButton
-            android:id="@+id/rb_community"
+            android:id="@+id/rb_exercise"
             style="@style/tab_menu_item"
-            android:drawableTop="@mipmap/ic_community"
-            android:text="@string/menu_community" />
+            android:drawableTop="@mipmap/ic_exercise"
+            android:text="@string/menu_exercise" />
 
         <RadioButton
             android:id="@+id/rb_info"

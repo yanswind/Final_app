@@ -48,6 +48,8 @@ public class CalcActivity extends AppCompatActivity {
         TextView up_style = findViewById(R.id.up);
         Button calc = findViewById(R.id.calc);
 
+        run_style.setText("1000米");
+        up_style.setText("引体向上");
         final String[] selectedGrade = new String[1];
         final String[] sex = new String[1];
         gender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

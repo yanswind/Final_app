@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">Final App</string>
-    <string name="title_home">首页</string>
-    <string name="title_community">社区</string>
-    <string name="title_info">我的</string>
     <string name="run2_male">1000米</string>
     <string name="run2_female">800米</string>
     <string name="up_male">引体向上</string>
@@ -14,7 +11,7 @@
         <item>大四</item>
     </string-array>
     <string name="menu_home">首页</string>
-    <string name="menu_community">社区</string>
+    <string name="menu_exercise">锻炼</string>
     <string name="menu_info">我的</string>
     <string name="btn">查看详情</string>
 </resources>
